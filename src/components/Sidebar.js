@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ProductConsumer } from "../context";
-
 export default function Sidebar() {
   return (
     <ProductConsumer>
-      {(value) => {
+      {value => {
         const { links, sidebarOpen, handleSidebar } = value;
         return (
           <SideWrapper show={sidebarOpen}>
             <ul>
-              {links.map((link) => {
+              {links.map(link => {
                 return (
                   <li key={link.id}>
                     <Link
@@ -38,11 +37,11 @@ const SideWrapper = styled.nav`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--mainGrey);
+  background: var(--mainGrey);
   z-index: 1;
   border-right: 4px solid var(--primaryColor);
   transition: var(--mainTransition);
-  transform: ${(props) => (props.show ? "translateX(0)" : "translateX(-100%)")};
+  transform: ${props => (props.show ? "translateX(0)" : "translateX(-100%)")};
   ul {
     list-style-type: none;
     padding: 0 !important;

@@ -175,7 +175,7 @@ export const items = [
         featured: false,
         image: { fields: { file: { url: "img/product-11.png" } } }
       },
-      freeShipping: false
+      freeShipping: true
     },
     {
       sys: { id: 12 },

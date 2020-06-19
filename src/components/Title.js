@@ -5,20 +5,18 @@ export default function Title({ title, center }) {
     <TitleWrapper className="row" center={center}>
       <div className="col">
         <h2 className="text-title">{title}</h2>
-        <div className="title-underline"></div>
+        <div className="title-underline" />
       </div>
-      This wil bi title component
     </TitleWrapper>
   );
 }
 
 const TitleWrapper = styled.div`
-text-align:${props => props.center ? "center" : 'left'};
-.title-underlinr{
-    height:0.25rem;
-    width:7rem;
+  text-align: ${props => (props.center ? "center" : "left")};
+  .title-underline {
+    height: 0.25rem;
+    width: 7rem;
     background: var(--primaryColor);
-    margin: ${props=>(props.center ? '0 auto' : '0')}
-
-}
+    margin: ${props => (props.center ? "0 auto" : "0")};
+  }
 `;
